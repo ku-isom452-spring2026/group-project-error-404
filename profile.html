@@ -2,85 +2,172 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View a Naqash user profile, activity summary, and recent posts."
+    />
     <title>Profile - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-top">
-        <a href="index.html" class="nav-brand">Naqash</a>
-        <input type="text" class="search-bar" placeholder="Search..." />
-        <div class="nav-links">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-shell">
+        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
+          Naqash
+        </a>
+
+        <form class="search-form" role="search">
+          <label class="sr-only" for="profile-search">Search Naqash</label>
+          <input
+            id="profile-search"
+            name="search"
+            type="search"
+            class="search-bar"
+            placeholder="Search communities and topics..."
+          />
+        </form>
+
+        <nav class="nav-links" aria-label="Account links">
           <a href="#" class="btn btn-outline">Login</a>
           <a href="#" class="btn btn-primary">Register</a>
-        </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Profile Header -->
-    <div class="profile-header card">
-      <img src="images/profile.png" alt="Profile" class="profile-img" />
-      <div>
-        <h2>u/username</h2>
-        <p class="rules-text">This is the user bio description.</p>
-      </div>
-    </div>
+    <main id="main-content" class="container">
+      <section class="profile-hero card">
+        <div class="profile-avatar" aria-hidden="true">UN</div>
 
-    <!-- Stats -->
-    <div class="profile-stats container">
-      <div class="card stat-box">
-        <h3>Posts</h3>
-        <p>12</p>
-      </div>
-      <div class="card stat-box">
-        <h3>Comments</h3>
-        <p>45</p>
-      </div>
-      <div class="card stat-box">
-        <h3>Communities</h3>
-        <p>5</p>
-      </div>
-    </div>
+        <div class="profile-copy">
+          <p class="eyebrow">Profile Overview</p>
+          <h1>u/username</h1>
+          <p class="lead profile-bio">
+            Frontend enthusiast sharing experiments, product ideas, and practical
+            lessons from building online communities.
+          </p>
 
-    <!-- Tabs -->
-    <div class="container">
-      <div class="tabs">
-        <button class="btn btn-primary">My Posts</button>
-        <button class="btn btn-outline">Saved Posts</button>
-        <button class="btn btn-outline">Settings</button>
-      </div>
-
-      <!-- Posts -->
-      <main class="feed">
-        <article class="card post-card">
-          <div class="post-main-content">
-            <div class="post-header">Posted in r/WebDev</div>
-            <a href="#" class="post-title">My First Post</a>
+          <div class="profile-meta" aria-label="Profile details">
+            <span>Cake day: January 12, 2025</span>
+            <span>Based in Kuwait City</span>
+            <span>12.4k reputation</span>
           </div>
-          <div class="vote-section">
-            <button class="vote-btn">▲</button>
-            <span class="vote-count">20</span>
-            <button class="vote-btn">▼</button>
-            <span class="footer-meta">Edit | Delete</span>
-          </div>
+        </div>
+
+        <div class="profile-cta">
+          <a href="#" class="btn btn-primary">Follow</a>
+          <a href="#" class="btn btn-outline">Message</a>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="User statistics">
+        <article class="card stat-card">
+          <p class="stat-label">Posts</p>
+          <p class="stat-value">12</p>
         </article>
 
-        <article class="card post-card">
-          <div class="post-main-content">
-            <div class="post-header">Posted in r/Tech</div>
-            <a href="#" class="post-title">Another Post</a>
-          </div>
-          <div class="vote-section">
-            <button class="vote-btn">▲</button>
-            <span class="vote-count">10</span>
-            <button class="vote-btn">▼</button>
-            <span class="footer-meta">Edit | Delete</span>
-          </div>
+        <article class="card stat-card">
+          <p class="stat-label">Comments</p>
+          <p class="stat-value">45</p>
         </article>
-      </main>
-    </div>
 
-    <footer>
+        <article class="card stat-card">
+          <p class="stat-label">Communities</p>
+          <p class="stat-value">5</p>
+        </article>
+      </section>
+
+      <nav class="pill-nav card" aria-label="Profile sections">
+        <a href="#" class="pill-link is-active" aria-current="page">My Posts</a>
+        <a href="#" class="pill-link">Saved Posts</a>
+        <a href="#" class="pill-link">Settings</a>
+      </nav>
+
+      <section class="profile-layout">
+        <div class="feed-stack">
+          <article class="card post-card">
+            <div class="post-topline">
+              <span class="post-community">Posted in r/WebDev</span>
+              <span class="post-time">2 hours ago</span>
+            </div>
+
+            <h2 class="post-title">
+              <a href="#">My First Post</a>
+            </h2>
+
+            <p class="post-excerpt">
+              A quick breakdown of how I structured my first responsive landing
+              page and what I would improve on the next iteration.
+            </p>
+
+            <div class="post-footer">
+              <div class="vote-group" aria-label="Post score">
+                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
+                <span class="vote-count">20</span>
+                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              </div>
+
+              <div class="post-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card post-card">
+            <div class="post-topline">
+              <span class="post-community">Posted in r/Tech</span>
+              <span class="post-time">Yesterday</span>
+            </div>
+
+            <h2 class="post-title">
+              <a href="#">Another Post</a>
+            </h2>
+
+            <p class="post-excerpt">
+              Notes on keeping product discussions focused while still making room
+              for open-ended community feedback.
+            </p>
+
+            <div class="post-footer">
+              <div class="vote-group" aria-label="Post score">
+                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
+                <span class="vote-count">10</span>
+                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              </div>
+
+              <div class="post-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="sidebar-stack" aria-label="Profile sidebar">
+          <section class="card sidebar-card">
+            <h2>About This User</h2>
+            <p>
+              Interested in interface design, digital communities, and writing
+              practical guides for newer developers.
+            </p>
+          </section>
+
+          <section class="card sidebar-card">
+            <h2>Top Communities</h2>
+            <ul class="feature-list compact-list">
+              <li>r/WebDev</li>
+              <li>r/Tech</li>
+              <li>r/DesignCrit</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#">Terms</a>
