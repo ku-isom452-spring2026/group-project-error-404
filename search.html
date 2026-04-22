@@ -2,111 +2,160 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse search results on Naqash across posts, communities, and users."
+    />
     <title>Search - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-top">
-        <a href="index.html" class="nav-brand">Naqash</a>
-        <input
-          type="text"
-          class="search-bar"
-          placeholder="Search..."
-        />
-        <div class="nav-links">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-shell">
+        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
+          Naqash
+        </a>
+
+        <form class="search-form" role="search">
+          <label class="sr-only" for="search-page-input">Search Naqash</label>
+          <input
+            id="search-page-input"
+            name="search"
+            type="search"
+            class="search-bar"
+            value="keyword"
+            placeholder="Search communities and topics..."
+          />
+        </form>
+
+        <nav class="nav-links" aria-label="Account links">
           <a href="#" class="btn btn-outline">Login</a>
           <a href="#" class="btn btn-primary">Register</a>
-        </div>
+        </nav>
       </div>
     </header>
 
-    <div class="container">
-      <!-- Title -->
-      <h2>Search results for: "keyword"</h2>
+    <main id="main-content" class="container">
+      <section class="search-hero card">
+        <p class="eyebrow">Search Results</p>
+        <h1>Results for "keyword"</h1>
+        <p class="lead">
+          Explore the most relevant discussions, communities, and contributors
+          matching your search.
+        </p>
+      </section>
 
-      <!-- Filters -->
-      <div class="tabs">
-        <button class="btn btn-primary">Posts</button>
-        <button class="btn btn-outline">Communities</button>
-        <button class="btn btn-outline">Users</button>
-      </div>
+      <nav class="pill-nav card" aria-label="Search result types">
+        <a href="#" class="pill-link is-active" aria-current="page">Posts</a>
+        <a href="#" class="pill-link">Communities</a>
+        <a href="#" class="pill-link">Users</a>
+      </nav>
 
-      <!-- Sort + Categories -->
-      <div class="card">
-        <div class="search-options">
-          <label>Sort by:</label>
-          <select>
+      <section class="card search-toolbar" aria-label="Search filters">
+        <div class="toolbar-group">
+          <label for="sort-results">Sort by</label>
+          <select id="sort-results" class="search-select" name="sort">
             <option>Relevance</option>
-            <option>New</option>
+            <option>Newest</option>
             <option>Top</option>
           </select>
-
-          <label>Categories:</label>
-          <button class="btn btn-outline">Technology</button>
-          <button class="btn btn-outline">Sports</button>
-          <button class="btn btn-outline">New</button>
         </div>
-      </div>
 
-      <div class="layout-2-cols">
-        <!-- Results -->
-        <main class="feed">
-          <article class="card post-card">
-            <div class="post-main-content">
-              <div class="post-header">Posted in r/Community • 1h ago</div>
-              <a href="#" class="post-title">Result Post Title 1</a>
+        <div class="toolbar-group">
+          <span class="toolbar-label">Categories</span>
+          <div class="chip-row">
+            <a href="#" class="filter-chip is-active">Technology</a>
+            <a href="#" class="filter-chip">Sports</a>
+            <a href="#" class="filter-chip">New</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-layout">
+        <div class="feed-stack">
+          <article class="card result-card">
+            <div class="post-topline">
+              <span class="post-community">Posted in r/Community</span>
+              <span class="post-time">1 hour ago</span>
             </div>
 
-            <div class="vote-section">
-              <button class="vote-btn">▲</button>
-              <span class="vote-count">55</span>
-              <button class="vote-btn">▼</button>
-              <span class="footer-meta">
-                💬 10 Comments
-              </span>
+            <h2 class="post-title">
+              <a href="#">Result Post Title 1</a>
+            </h2>
+
+            <p class="post-excerpt">
+              A discussion about how community guidelines can improve quality,
+              participation, and trust inside growing discussion spaces.
+            </p>
+
+            <div class="post-footer">
+              <div class="vote-group" aria-label="Post score">
+                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
+                <span class="vote-count">55</span>
+                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              </div>
+
+              <div class="result-meta">
+                <a href="#">10 comments</a>
+              </div>
             </div>
           </article>
 
-          <article class="card post-card">
-            <div class="post-main-content">
-              <div class="post-header">Posted in r/Tech • 3h ago</div>
-              <a href="#" class="post-title">Result Post Title 2</a>
+          <article class="card result-card">
+            <div class="post-topline">
+              <span class="post-community">Posted in r/Tech</span>
+              <span class="post-time">3 hours ago</span>
             </div>
 
-            <div class="vote-section">
-              <button class="vote-btn">▲</button>
-              <span class="vote-count">30</span>
-              <button class="vote-btn">▼</button>
-              <span class="footer-meta">
-                💬 5 Comments
-              </span>
+            <h2 class="post-title">
+              <a href="#">Result Post Title 2</a>
+            </h2>
+
+            <p class="post-excerpt">
+              Notes on discovering useful content faster by refining search logic,
+              community tags, and topic-based recommendations.
+            </p>
+
+            <div class="post-footer">
+              <div class="vote-group" aria-label="Post score">
+                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
+                <span class="vote-count">30</span>
+                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              </div>
+
+              <div class="result-meta">
+                <a href="#">5 comments</a>
+              </div>
             </div>
           </article>
-        </main>
+        </div>
 
-        <!-- Sidebar -->
-        <aside class="sidebar card">
-          <h3>Categories</h3>
-          <ul class="rules-list">
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">New</a></li>
-          </ul>
+        <aside class="sidebar-stack" aria-label="Search sidebar">
+          <section class="card sidebar-card">
+            <h2>Popular Categories</h2>
+            <ul class="feature-list compact-list sidebar-list">
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </section>
 
-          <hr class="sidebar-divider" />
-
-          <h3>Trending Communities</h3>
-          <ul>
-            <li><a href="#">r/WebDev</a></li>
-            <li><a href="#">r/Science</a></li>
-            <li><a href="#">r/Gaming</a></li>
-          </ul>
+          <section class="card sidebar-card">
+            <h2>Trending Communities</h2>
+            <ul class="feature-list compact-list sidebar-list">
+              <li><a href="#">r/WebDev</a></li>
+              <li><a href="#">r/Science</a></li>
+              <li><a href="#">r/Gaming</a></li>
+            </ul>
+          </section>
         </aside>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <footer>
+    <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#">Terms</a>
