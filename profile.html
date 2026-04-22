@@ -1,47 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Profile - Naqash</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="nav-brand">Naqash</a>
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <div class="nav-links">
+          <a href="#" class="btn btn-outline">Login</a>
+          <a href="#" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </header>
 
-
-<nav>
-    <h2>Naqash</h2>
-    <a href="index.html">Home</a>
-    <a href="search.html">Search</a>
-    <a href="about.html">About</a>
-</nav>
-
-
-<section>
-    <img src="profile.png" alt="Profile Picture" width="100">
-    <h2>Username</h2>
-    <p>This is the user bio</p>
-</section>
-
-
-<section>
-    <p>Posts: 12</p>
-    <p>Comments: 45</p>
-</section>
-
-
-<section>
-    <h3>My Posts</h3>
-
-    <div class="post">
-        <h4>My First Post</h4>
-        <p>r/WebDev • ▲ 20</p>
+    <!-- Profile Header -->
+    <div class="profile-header card">
+      <img src="images/profile.png" alt="Profile" class="profile-img" />
+      <div>
+        <h2>u/username</h2>
+        <p class="rules-text">This is the user bio description.</p>
+      </div>
     </div>
 
-    <div class="post">
-        <h4>Another Post</h4>
-        <p>r/Tech • ▲ 10</p>
+    <!-- Stats -->
+    <div class="profile-stats container">
+      <div class="card stat-box">
+        <h3>Posts</h3>
+        <p>12</p>
+      </div>
+      <div class="card stat-box">
+        <h3>Comments</h3>
+        <p>45</p>
+      </div>
+      <div class="card stat-box">
+        <h3>Communities</h3>
+        <p>5</p>
+      </div>
     </div>
-</section>
 
-</body>
+    <!-- Tabs -->
+    <div class="container">
+      <div class="tabs">
+        <button class="btn btn-primary">My Posts</button>
+        <button class="btn btn-outline">Saved Posts</button>
+        <button class="btn btn-outline">Settings</button>
+      </div>
+
+      <!-- Posts -->
+      <main class="feed">
+        <article class="card post-card">
+          <div class="post-main-content">
+            <div class="post-header">Posted in r/WebDev</div>
+            <a href="#" class="post-title">My First Post</a>
+          </div>
+          <div class="vote-section">
+            <button class="vote-btn">▲</button>
+            <span class="vote-count">20</span>
+            <button class="vote-btn">▼</button>
+            <span class="footer-meta">Edit | Delete</span>
+          </div>
+        </article>
+
+        <article class="card post-card">
+          <div class="post-main-content">
+            <div class="post-header">Posted in r/Tech</div>
+            <a href="#" class="post-title">Another Post</a>
+          </div>
+          <div class="vote-section">
+            <button class="vote-btn">▲</button>
+            <span class="vote-count">10</span>
+            <button class="vote-btn">▼</button>
+            <span class="footer-meta">Edit | Delete</span>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
 </html>
