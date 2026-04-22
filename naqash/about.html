@@ -3,11 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about Naqash, its mission, features, and community values."
+    />
     <title>About - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header></header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-shell">
+        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
+          Naqash
+        </a>
+
+        <form class="search-form" role="search">
+          <label class="sr-only" for="about-search">Search Naqash</label>
+          <input
+            id="about-search"
+            name="search"
+            type="search"
+            class="search-bar"
+            placeholder="Search communities and topics..."
+          />
+        </form>
+
+        <nav class="nav-links" aria-label="Account links">
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </nav>
+      </div>
+    </header>
 
     <main id="main-content" class="container">
       <section class="about-hero card">
@@ -19,7 +47,7 @@
           interests.
         </p>
         <div class="hero-actions">
-          <a href="#" class="btn btn-primary">Join the Community</a>
+          <a href="register.html" class="btn btn-primary">Join the Community</a>
           <a href="#mission" class="btn btn-outline">Learn More</a>
         </div>
       </section>
@@ -106,14 +134,22 @@
         <h2>Ready to Join the Conversation?</h2>
         <p>
           Explore communities, share your first post, or contact us at
-          <a href="mailto:support@naqash.com">support@naqash.com</a>
+          <a href="mailto:support@naqash.com">support@naqash.com</a>.
         </p>
         <div class="hero-actions">
-          <a href="#" class="btn btn-primary">Create an Account</a>
+          <a href="register.html" class="btn btn-primary">Create an Account</a>
           <a href="search.html" class="btn btn-outline">Explore Topics</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
   </body>
 </html>
-
