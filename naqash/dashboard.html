@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Naqash</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="nav-brand">Naqash</a>
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <div class="nav-links">
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="feed">
+      <section class="card dashboard-header">
+        <div class="dashboard-profile">
+          <img
+            src="images/profile.jpg"
+            alt="Profile Picture"
+            class="profile-picture"
+          />
+          <div class="profile-info">
+            <h2>u/user</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="card dashboard-tabs">
+        <div class="tabs">
+          <button class="tab-btn">My Posts</button>
+          <button class="tab-btn">Saved Posts</button>
+          <button class="tab-btn">Settings</button>
+        </div>
+      </section>
+
+      <section class="card dashboard-section">
+        <h3>My Posts</h3>
+
+        <article class="dashboard-post">
+          <div class="dashboard-post-info">
+            <a href="post.html" class="post-title">Is CSS Grid better than Flexbox?</a>
+            <p class="post-header">r/WebDev • ▲ 245</p>
+          </div>
+          <div class="dashboard-post-actions">
+            <a href="create-post.html" class="btn btn-outline">Edit</a>
+            <button class="btn btn-primary">Delete</button>
+          </div>
+        </article>
+
+        <article class="dashboard-post">
+          <div class="dashboard-post-info">
+            <a href="post.html" class="post-title">Latest hardware updates for 2026 gaming builds</a>
+            <p class="post-header">r/Tech • ▲ 102</p>
+          </div>
+          <div class="dashboard-post-actions">
+            <a href="create-post.html" class="btn btn-outline">Edit</a>
+            <button class="btn btn-primary">Delete</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="card dashboard-section">
+        <h3>Saved Posts</h3>
+
+        <article class="dashboard-post">
+          <div class="dashboard-post-info">
+            <a href="post.html" class="post-title">How do you center a div? Wrong answers only.</a>
+            <p class="post-header">r/WebDev • ▲ 320</p>
+          </div>
+        </article>
+
+        <article class="dashboard-post">
+          <div class="dashboard-post-info">
+            <a href="post.html" class="post-title">Best resources to learn JavaScript in 2026</a>
+            <p class="post-header">r/Programming • ▲ 87</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="card dashboard-section">
+        <h3>Account Settings</h3>
+
+        <form class="settings-form">
+          <label for="display-name">Display Name</label>
+          <input
+            type="text"
+            id="display-name"
+            class="form-input"
+            placeholder="Enter display name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="Enter email"
+          />
+
+          <label for="password">New Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="Enter new password"
+          />
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
+</html>
