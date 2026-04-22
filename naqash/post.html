@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post - Naqash</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="nav-brand">Naqash</a>
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <div class="nav-links">
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="feed">
+      <article class="card post-card">
+        <div class="post-main-content">
+          <div class="post-header">
+            r/WebDev • Posted by u/frontend_dev • 2h ago
+          </div>
+
+          <a href="post.html" class="post-title">
+            Is CSS Grid better than Flexbox?
+          </a>
+
+          <p class="post-body">
+            This is a discussion about layout systems in modern web development.
+          </p>
+        </div>
+
+        <div class="vote-section">
+          <button class="vote-btn">▲</button>
+          <span class="vote-count">245</span>
+          <button class="vote-btn">▼</button>
+
+          <span class="footer-meta">34 Comments</span>
+          <span class="footer-meta">Share</span>
+          <span class="footer-meta">Save</span>
+        </div>
+      </article>
+
+      <section class="card comment-box">
+        <h3>Add a comment</h3>
+        <textarea
+          class="comment-input"
+          placeholder="Write your comment..."
+        ></textarea>
+        <div class="comment-actions">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </section>
+
+      <section class="card comments-section">
+        <div class="comment">
+          <strong>u/user1:</strong>
+          <p>I prefer Grid for layout!</p>
+        </div>
+
+        <div class="comment reply">
+          <strong>u/user2:</strong>
+          <p>Flexbox is easier </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
+</html>
