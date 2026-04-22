@@ -1,40 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Search - Naqash</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="nav-brand">Naqash</a>
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search..."
+        />
+        <div class="nav-links">
+          <a href="#" class="btn btn-outline">Login</a>
+          <a href="#" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </header>
 
+    <div class="container">
+      <!-- Title -->
+      <h2>Search results for: "keyword"</h2>
 
-<nav>
-    <h2>Naqash</h2>
-    <input type="text" placeholder="Search...">
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profile</a>
-    <a href="about.html">About</a>
-</nav>
+      <!-- Filters -->
+      <div class="tabs">
+        <button class="btn btn-primary">Posts</button>
+        <button class="btn btn-outline">Communities</button>
+        <button class="btn btn-outline">Users</button>
+      </div>
 
-<h2>Search Results</h2>
+      <!-- Sort + Categories -->
+      <div class="card">
+        <div class="search-options">
+          <label>Sort by:</label>
+          <select>
+            <option>Relevance</option>
+            <option>New</option>
+            <option>Top</option>
+          </select>
 
+          <label>Categories:</label>
+          <button class="btn btn-outline">Technology</button>
+          <button class="btn btn-outline">Sports</button>
+          <button class="btn btn-outline">New</button>
+        </div>
+      </div>
 
-<div>
-    <button>Posts</button>
-    <button>Communities</button>
-    <button>Users</button>
-</div>
+      <div class="layout-2-cols">
+        <!-- Results -->
+        <main class="feed">
+          <article class="card post-card">
+            <div class="post-main-content">
+              <div class="post-header">Posted in r/Community • 1h ago</div>
+              <a href="#" class="post-title">Result Post Title 1</a>
+            </div>
 
+            <div class="vote-section">
+              <button class="vote-btn">▲</button>
+              <span class="vote-count">55</span>
+              <button class="vote-btn">▼</button>
+              <span class="footer-meta">
+                💬 10 Comments
+              </span>
+            </div>
+          </article>
 
-<div class="result">
-    <h3>Post Title Example</h3>
-    <p>r/Technology • 💬 10 comments</p>
-</div>
+          <article class="card post-card">
+            <div class="post-main-content">
+              <div class="post-header">Posted in r/Tech • 3h ago</div>
+              <a href="#" class="post-title">Result Post Title 2</a>
+            </div>
 
-<div class="result">
-    <h3>Community: WebDev</h3>
-    <p>3200 members</p>
-</div>
+            <div class="vote-section">
+              <button class="vote-btn">▲</button>
+              <span class="vote-count">30</span>
+              <button class="vote-btn">▼</button>
+              <span class="footer-meta">
+                💬 5 Comments
+              </span>
+            </div>
+          </article>
+        </main>
 
-</body>
+        <!-- Sidebar -->
+        <aside class="sidebar card">
+          <h3>Categories</h3>
+          <ul class="rules-list">
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">New</a></li>
+          </ul>
+
+          <hr class="sidebar-divider" />
+
+          <h3>Trending Communities</h3>
+          <ul>
+            <li><a href="#">r/WebDev</a></li>
+            <li><a href="#">r/Science</a></li>
+            <li><a href="#">r/Gaming</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
 </html>
