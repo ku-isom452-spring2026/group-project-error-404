@@ -2,53 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naqash - Global Feed</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <header>
-      <div class="header-top">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-shell">
         <a href="index.html" class="nav-brand">Naqash</a>
-        <input type="text" class="search-bar" placeholder="Search Naqash..." />
+
+        <form class="search-form">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search Naqash..."
+          />
+        </form>
+
         <div class="nav-links">
-          <a href="#" class="btn btn-outline">Login</a>
-          <a href="#" class="btn btn-primary">Register</a>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
         </div>
       </div>
-      <nav class="sub-nav">
-        <a href="#">Hot</a> <a href="#">New</a> <a href="#">Top</a>
-        <a href="#">Rising</a>
-      </nav>
     </header>
 
+    <!-- MAIN LAYOUT -->
     <div class="container layout-3-cols">
+
+      <!-- LEFT SIDEBAR (MAIN NAVIGATION like Reddit) -->
       <aside class="sidebar card">
+        <h3>Navigation</h3>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="community.html">Communities</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="create-post.html">Create Post</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <hr />
+
         <h3>Top Communities</h3>
         <ul>
           <li><a href="community.html">r/WebDev</a></li>
-          <li><a href="#">r/Science</a></li>
-          <li><a href="#">r/Sports</a></li>
+          <li><a href="community.html">r/Science</a></li>
+          <li><a href="community.html">r/Sports</a></li>
         </ul>
       </aside>
 
+      <!-- MAIN FEED -->
       <main class="feed">
         <article class="card post-card">
           <div class="post-main-content">
             <div class="post-header">r/WebDev • 2h ago</div>
-            <a href="#" class="post-title"
-              >Is CSS Grid better than Flexbox for sidebars?</a
-            >
+
+            <a href="post.html" class="post-title">
+              Is CSS Grid better than Flexbox for sidebars?
+            </a>
           </div>
+
           <div class="vote-section">
             <button class="vote-btn">▲</button>
             <span class="vote-count">245</span>
             <button class="vote-btn">▼</button>
+
             <span class="footer-meta">
-              <img
-                src="images/comment.png"
-                alt="Comments"
-                class="comment-icon"
-              />
+              <img src="images/comment.png" alt="Comments" class="comment-icon" />
               34 Comments
             </span>
           </div>
@@ -57,49 +80,59 @@
         <article class="card post-card">
           <div class="post-main-content">
             <div class="post-header">r/Tech • 5h ago</div>
-            <a href="#" class="post-title"
-              >Latest hardware updates for 2026 gaming builds</a
-            >
+
+            <a href="post.html" class="post-title">
+              Latest hardware updates for 2026 gaming builds
+            </a>
           </div>
+
           <div class="vote-section">
             <button class="vote-btn">▲</button>
             <span class="vote-count">102</span>
             <button class="vote-btn">▼</button>
+
             <span class="footer-meta">
-              <img
-                src="images/comment.png"
-                alt="Comments"
-                class="comment-icon"
-              />
+              <img src="images/comment.png" alt="Comments" class="comment-icon" />
               12 Comments
             </span>
           </div>
         </article>
       </main>
 
+      <!-- RIGHT SIDEBAR -->
       <aside class="sidebar card">
         <h3>Trending</h3>
         <ul>
           <li>#Coding</li>
           <li>#KuwaitTech</li>
         </ul>
+
         <hr class="sidebar-divider" />
-        <a href="create-post.html" class="btn btn-primary block-btn"
-          >Create Post</a
-        >
-        <a href="#" class="btn btn-outline block-btn">Create Community</a>
+
+        <a href="create-post.html" class="btn btn-primary block-btn">
+          Create Post
+        </a>
+
+        <a href="community.html" class="btn btn-outline block-btn">
+          Create Community
+        </a>
+
         <div class="sidebar-rules">
           <h3>Rules</h3>
-          <p style="font-size: 0.8rem; color: #777">
+          <p class="rules-text">
             Follow the community guidelines.
           </p>
         </div>
       </aside>
+
     </div>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
       <div class="footer-links">
-        <a href="#">About</a> <a href="#">Terms</a> <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
