@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-top">
+    <header class="site-header">
+      <div class="header-shell">
         <a href="index.html" class="nav-brand">Naqash</a>
-        <input type="text" class="search-bar" placeholder="Search..." />
+
+        <form action="search.html" method="GET" class="search-form">
+          <input
+            type="search"
+            name="query"
+            class="search-bar"
+            placeholder="Search Naqash..."
+            required
+          />
+        </form>
+
         <div class="nav-links">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Register</a>
@@ -18,11 +28,15 @@
       </div>
     </header>
 
+    <div class="page-topbar">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
     <main class="feed">
       <article class="card post-card">
         <div class="post-main-content">
           <div class="post-header">
-            r/WebDev • Posted by u/frontend_dev • 2h ago
+            r/WebDev • Posted by u/username • 2h ago
           </div>
 
           <a href="post.html" class="post-title">
@@ -35,11 +49,11 @@
         </div>
 
         <div class="vote-section">
-          <button class="vote-btn">▲</button>
+          <button class="vote-btn" type="button">▲</button>
           <span class="vote-count">245</span>
-          <button class="vote-btn">▼</button>
+          <button class="vote-btn" type="button">▼</button>
 
-          <span class="footer-meta">34 Comments</span>
+          <span class="footer-meta">2 Comments</span>
           <span class="footer-meta">Share</span>
           <span class="footer-meta">Save</span>
         </div>
@@ -52,7 +66,7 @@
           placeholder="Write your comment..."
         ></textarea>
         <div class="comment-actions">
-          <button class="btn btn-primary">Submit</button>
+          <button class="btn btn-primary" type="button">Submit</button>
         </div>
       </section>
 
@@ -64,12 +78,12 @@
 
         <div class="comment reply">
           <strong>u/user2:</strong>
-          <p>Flexbox is easier </p>
+          <p>Flexbox is easier</p>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#">Terms</a>

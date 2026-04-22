@@ -10,28 +10,26 @@
     <title>Search - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
       <div class="header-shell">
-        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
-          Naqash
-        </a>
+        <a href="index.html" class="nav-brand">Naqash</a>
 
-        <form class="search-form" role="search">
-          <label class="sr-only" for="search-page-input">Search Naqash</label>
+        <form class="search-form">
           <input
             id="search-page-input"
             name="search"
             type="search"
             class="search-bar"
-            value="keyword"
+            value="CSS Grid"
             placeholder="Search communities and topics..."
           />
         </form>
 
-        <nav class="nav-links" aria-label="Account links">
+        <nav class="nav-links">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Register</a>
         </nav>
@@ -41,23 +39,22 @@
     <main id="main-content" class="container">
       <section class="search-hero card">
         <p class="eyebrow">Search Results</p>
-        <h1>Results for "keyword"</h1>
+        <h1>Results for "CSS Grid"</h1>
         <p class="lead">
-          Explore the most relevant discussions, communities, and contributors
-          matching your search.
+          Explore the most relevant discussions, communities, and contributors.
         </p>
       </section>
 
-      <nav class="pill-nav card" aria-label="Search result types">
-        <a href="search.html" class="pill-link is-active" aria-current="page">Posts</a>
+      <nav class="pill-nav card">
+        <a href="search.html" class="pill-link is-active">Posts</a>
         <a href="search.html" class="pill-link">Communities</a>
         <a href="search.html" class="pill-link">Users</a>
       </nav>
 
-      <section class="card search-toolbar" aria-label="Search filters">
+      <section class="card search-toolbar">
         <div class="toolbar-group">
-          <label for="sort-results">Sort by</label>
-          <select id="sort-results" class="search-select" name="sort">
+          <label>Sort by</label>
+          <select class="search-select">
             <option>Relevance</option>
             <option>Newest</option>
             <option>Top</option>
@@ -68,8 +65,6 @@
           <span class="toolbar-label">Categories</span>
           <div class="chip-row">
             <a href="community.html" class="filter-chip is-active">Technology</a>
-            <a href="community.html" class="filter-chip">Sports</a>
-            <a href="community.html" class="filter-chip">New</a>
           </div>
         </div>
       </section>
@@ -78,68 +73,40 @@
         <div class="feed-stack">
           <article class="card result-card">
             <div class="post-topline">
-              <span class="post-community">Posted in <a href="community.html">r/Community</a></span>
-              <span class="post-time">1 hour ago</span>
+              <span class="post-community">
+                Posted in <a href="community.html">r/WebDev</a>
+              </span>
+              <span class="post-time">2 hours ago</span>
             </div>
 
             <h2 class="post-title">
-              <a href="post.html">Result Post Title 1</a>
+              <a href="post.html">Is CSS Grid better than Flexbox?</a>
             </h2>
 
             <p class="post-excerpt">
-              A discussion about how community guidelines can improve quality,
-              participation, and trust inside growing discussion spaces.
+              This is a discussion about layout systems in modern web development.
             </p>
 
             <div class="post-footer">
-              <div class="vote-group" aria-label="Post score">
-                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
-                <span class="vote-count">55</span>
-                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              <div class="vote-group">
+                <button class="vote-btn">▲</button>
+                <span class="vote-count">245</span>
+                <button class="vote-btn">▼</button>
               </div>
 
               <div class="result-meta">
-                <a href="post.html">10 comments</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card result-card">
-            <div class="post-topline">
-              <span class="post-community">Posted in <a href="community.html">r/Tech</a></span>
-              <span class="post-time">3 hours ago</span>
-            </div>
-
-            <h2 class="post-title">
-              <a href="post.html">Result Post Title 2</a>
-            </h2>
-
-            <p class="post-excerpt">
-              Notes on discovering useful content faster by refining search logic,
-              community tags, and topic-based recommendations.
-            </p>
-
-            <div class="post-footer">
-              <div class="vote-group" aria-label="Post score">
-                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
-                <span class="vote-count">30</span>
-                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
-              </div>
-
-              <div class="result-meta">
-                <a href="post.html">5 comments</a>
+                <a href="post.html">2 comments</a>
               </div>
             </div>
           </article>
         </div>
 
-        <aside class="sidebar-stack" aria-label="Search sidebar">
+        <!-- SIDEBAR -->
+        <aside class="sidebar-stack">
           <section class="card sidebar-card">
             <h2>Popular Categories</h2>
             <ul class="feature-list compact-list sidebar-list">
               <li><a href="community.html">Technology</a></li>
-              <li><a href="community.html">Sports</a></li>
-              <li><a href="community.html">News</a></li>
             </ul>
           </section>
 
@@ -147,8 +114,6 @@
             <h2>Trending Communities</h2>
             <ul class="feature-list compact-list sidebar-list">
               <li><a href="community.html">r/WebDev</a></li>
-              <li><a href="community.html">r/Science</a></li>
-              <li><a href="community.html">r/Gaming</a></li>
             </ul>
           </section>
         </aside>

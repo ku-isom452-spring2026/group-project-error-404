@@ -10,49 +10,54 @@
     <title>Profile - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
-        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
-          Naqash
-        </a>
+        <a href="index.html" class="nav-brand">Naqash</a>
 
-        <form class="search-form" role="search">
-          <label class="sr-only" for="profile-search">Search Naqash</label>
+        <!-- 🔥 FIXED SEARCH -->
+        <form action="search.html" method="GET" class="search-form">
           <input
-            id="profile-search"
-            name="search"
             type="search"
+            name="query"
             class="search-bar"
-            placeholder="Search communities and topics..."
+            placeholder="Search Naqash..."
+            required
           />
         </form>
 
-        <nav class="nav-links" aria-label="Account links">
+        <nav class="nav-links">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Register</a>
         </nav>
       </div>
     </header>
 
+    <!-- 🔥 BACK BUTTON -->
+    <div class="page-topbar">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
     <main id="main-content" class="container">
+      <!-- PROFILE HEADER -->
       <section class="profile-hero card">
-        <div class="profile-avatar" aria-hidden="true">UN</div>
+        <div class="profile-avatar">UN</div>
 
         <div class="profile-copy">
           <p class="eyebrow">Profile Overview</p>
           <h1>u/username</h1>
           <p class="lead profile-bio">
-            Frontend enthusiast sharing experiments, product ideas, and practical
-            lessons from building online communities.
+            Frontend enthusiast sharing experiments and ideas about web development.
           </p>
 
-          <div class="profile-meta" aria-label="Profile details">
+          <div class="profile-meta">
             <span>Joined: October 13, 2023</span>
             <span>Based in Kuwait City</span>
-            <span>12.4k reputation</span>
+            <span>1.2k reputation</span>
           </div>
         </div>
 
@@ -62,80 +67,55 @@
         </div>
       </section>
 
-      <section class="stats-grid" aria-label="User statistics">
+      <!-- STATS -->
+      <section class="stats-grid">
         <article class="card stat-card">
           <p class="stat-label">Posts</p>
-          <p class="stat-value">12</p>
+          <p class="stat-value">1</p>
         </article>
 
         <article class="card stat-card">
           <p class="stat-label">Comments</p>
-          <p class="stat-value">45</p>
+          <p class="stat-value">0</p>
         </article>
 
         <article class="card stat-card">
           <p class="stat-label">Communities</p>
-          <p class="stat-value">5</p>
+          <p class="stat-value">1</p>
         </article>
       </section>
 
-      <nav class="pill-nav card" aria-label="Profile sections">
-        <a href="profile.html" class="pill-link is-active" aria-current="page">My Posts</a>
+      <!-- TABS -->
+      <nav class="pill-nav card">
+        <a href="profile.html" class="pill-link is-active">My Posts</a>
         <a href="dashboard.html" class="pill-link">Saved Posts</a>
         <a href="dashboard.html" class="pill-link">Settings</a>
       </nav>
 
+      <!-- CONTENT -->
       <section class="profile-layout">
         <div class="feed-stack">
           <article class="card post-card">
             <div class="post-topline">
-              <span class="post-community">Posted in <a href="community.html">r/WebDev</a></span>
+              <span class="post-community">
+                Posted in <a href="community.html">r/WebDev</a>
+              </span>
               <span class="post-time">2 hours ago</span>
             </div>
 
             <h2 class="post-title">
-              <a href="post.html">My First Post</a>
+              <a href="post.html">Is CSS Grid better than Flexbox?</a>
             </h2>
 
             <p class="post-excerpt">
-              A quick breakdown of how I structured my first responsive landing
-              page and what I would improve on the next iteration.
+              This is a discussion about layout systems in modern web development.
             </p>
 
             <div class="post-footer">
-              <div class="vote-group" aria-label="Post score">
-                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
-                <span class="vote-count">20</span>
-                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
-              </div>
-
-              <div class="post-actions">
-                <a href="create-post.html">Edit</a>
-                <a href="dashboard.html">Delete</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card post-card">
-            <div class="post-topline">
-              <span class="post-community">Posted in <a href="community.html">r/Tech</a></span>
-              <span class="post-time">Yesterday</span>
-            </div>
-
-            <h2 class="post-title">
-              <a href="post.html">Another Post</a>
-            </h2>
-
-            <p class="post-excerpt">
-              Notes on keeping product discussions focused while still making room
-              for open-ended community feedback.
-            </p>
-
-            <div class="post-footer">
-              <div class="vote-group" aria-label="Post score">
-                <button class="vote-btn" type="button" aria-label="Upvote post">▲</button>
-                <span class="vote-count">10</span>
-                <button class="vote-btn" type="button" aria-label="Downvote post">▼</button>
+              <div class="vote-group">
+                <button class="vote-btn" type="button">▲</button>
+                <span class="vote-count">245</span>
+                <button class="vote-btn" type="button">▼</button>
               </div>
 
               <div class="post-actions">
@@ -146,12 +126,12 @@
           </article>
         </div>
 
-        <aside class="sidebar-stack" aria-label="Profile sidebar">
+        <!-- SIDEBAR -->
+        <aside class="sidebar-stack">
           <section class="card sidebar-card">
-            <h2>About This User</h2>
+            <h2>About me</h2>
             <p>
-              Interested in interface design, digital communities, and writing
-              practical guides for newer developers.
+              Interested in UI design, communities, and web development.
             </p>
           </section>
 
@@ -159,14 +139,13 @@
             <h2>Top Communities</h2>
             <ul class="feature-list compact-list">
               <li><a href="community.html">r/WebDev</a></li>
-              <li><a href="community.html">r/Tech</a></li>
-              <li><a href="community.html">r/DesignCrit</a></li>
             </ul>
           </section>
         </aside>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>

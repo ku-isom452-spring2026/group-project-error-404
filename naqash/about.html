@@ -10,34 +10,40 @@
     <title>About - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
-        <a href="index.html" class="nav-brand" aria-label="Back to the homepage">
-          Naqash
-        </a>
+        <a href="index.html" class="nav-brand">Naqash</a>
 
-        <form class="search-form" role="search">
-          <label class="sr-only" for="about-search">Search Naqash</label>
+        <!-- 🔥 FIXED SEARCH -->
+        <form action="search.html" method="GET" class="search-form">
           <input
-            id="about-search"
-            name="search"
             type="search"
+            name="query"
             class="search-bar"
-            placeholder="Search communities and topics..."
+            placeholder="Search Naqash..."
+            required
           />
         </form>
 
-        <nav class="nav-links" aria-label="Account links">
+        <nav class="nav-links">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Register</a>
         </nav>
       </div>
     </header>
 
+    <!-- 🔥 BACK BUTTON -->
+    <div class="page-topbar">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
     <main id="main-content" class="container">
+      <!-- HERO -->
       <section class="about-hero card">
         <p class="eyebrow">Built for Meaningful Conversations</p>
         <h1>About Naqash</h1>
@@ -46,27 +52,32 @@
           ideas, ask better questions, and grow communities around common
           interests.
         </p>
+
         <div class="hero-actions">
           <a href="register.html" class="btn btn-primary">Join the Community</a>
           <a href="#mission" class="btn btn-outline">Learn More</a>
         </div>
       </section>
 
-      <section class="stats-grid" aria-label="Platform highlights">
+      <!-- STATS -->
+      <section class="stats-grid">
         <article class="card stat-card">
           <p class="stat-label">Focused Topics</p>
-          <p class="stat-value">120+</p>
+          <p class="stat-value">1</p>
         </article>
+
         <article class="card stat-card">
           <p class="stat-label">Active Discussions</p>
-          <p class="stat-value">8.5k</p>
+          <p class="stat-value">1</p>
         </article>
+
         <article class="card stat-card">
           <p class="stat-label">Growing Communities</p>
-          <p class="stat-value">340+</p>
+          <p class="stat-value">1</p>
         </article>
       </section>
 
+      <!-- MISSION -->
       <section id="mission" class="card about-section">
         <h2>Our Mission</h2>
         <p>
@@ -76,6 +87,7 @@
         </p>
       </section>
 
+      <!-- INFO -->
       <section class="about-grid">
         <article class="card about-section">
           <h2>What Makes It Different</h2>
@@ -94,48 +106,53 @@
         </article>
       </section>
 
+      <!-- FEATURES -->
       <section class="card about-section">
         <h2>Key Features</h2>
         <ul class="feature-list">
-          <li>Create and share posts with ease.</li>
-          <li>Vote on content to highlight valuable discussions.</li>
-          <li>Join communities based on your interests.</li>
-          <li>Comment and interact in a structured environment.</li>
+          <li>Create and share posts.</li>
+          <li>Vote on content.</li>
+          <li>Join communities.</li>
+          <li>Comment and interact.</li>
         </ul>
       </section>
 
+      <!-- VALUES -->
       <section class="about-grid">
         <article class="card about-section">
           <h2>Our Values</h2>
           <ul class="feature-list">
-            <li>Respectful conversation over empty engagement.</li>
-            <li>Clear community identity and discoverability.</li>
-            <li>Simple tools that help users contribute confidently.</li>
+            <li>Respectful conversations.</li>
+            <li>Clear community structure.</li>
+            <li>Simple and useful tools.</li>
           </ul>
         </article>
 
         <article class="card about-section">
           <h2>Looking Ahead</h2>
           <p>
-            We want Naqash to grow into a place where thoughtful communities can thrive.
+            We aim to grow Naqash into a platform where meaningful communities thrive.
           </p>
         </article>
       </section>
 
+      <!-- FAQ -->
       <section class="card about-section">
         <h2>Help & FAQ</h2>
         <details>
           <summary>How do I create a new post?</summary>
-          <p>Go to the Create Post page, then add your title and content.</p>
+          <p>Go to the Create Post page and submit your content.</p>
         </details>
       </section>
 
+      <!-- CTA -->
       <section class="card about-cta">
         <h2>Ready to Join the Conversation?</h2>
         <p>
-          Explore communities, share your first post, or contact us at
+          Explore communities or contact us at
           <a href="mailto:support@naqash.com">support@naqash.com</a>.
         </p>
+
         <div class="hero-actions">
           <a href="register.html" class="btn btn-primary">Create an Account</a>
           <a href="search.html" class="btn btn-outline">Explore Topics</a>
@@ -143,6 +160,7 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>

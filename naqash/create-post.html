@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-
-    <header>
-      <div class="header-top">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-shell">
         <a href="index.html" class="nav-brand">Naqash</a>
-        <input type="text" class="search-bar" placeholder="Search..." />
+
+        <!-- SEARCH -->
+        <form action="search.html" method="GET" class="search-form">
+          <input
+            type="search"
+            name="query"
+            class="search-bar"
+            placeholder="Search Naqash..."
+            required
+          />
+        </form>
+
         <div class="nav-links">
           <a href="login.html" class="btn btn-outline">Login</a>
           <a href="register.html" class="btn btn-primary">Register</a>
@@ -19,31 +30,31 @@
       </div>
     </header>
 
-    <main class="feed">
+    <!-- BACK BUTTON -->
+    <div class="page-topbar">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
 
+    <!-- MAIN CONTENT -->
+    <main class="feed">
       <section class="card create-post-box">
         <h2>Create a Post</h2>
 
         <form>
-
-          <!-- Community -->
           <label for="community">Choose a Community:</label>
           <select id="community" class="form-input">
             <option>r/WebDev</option>
-            <option>r/Science</option>
-            <option>r/Sports</option>
           </select>
 
-          <!-- Title -->
           <label for="title">Title:</label>
           <input
             type="text"
             id="title"
             class="form-input"
             placeholder="Enter your post title"
+            value=""
           />
 
-          <!-- Post Type Tabs -->
           <div class="post-tabs">
             <button type="button" class="tab-btn">Text</button>
             <button type="button" class="tab-btn">Image</button>
@@ -51,7 +62,6 @@
             <button type="button" class="tab-btn">Link</button>
           </div>
 
-          <!-- Content -->
           <label for="content">Content:</label>
           <textarea
             id="content"
@@ -59,19 +69,16 @@
             placeholder="Write your post..."
           ></textarea>
 
-          <!-- Actions -->
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit Post</button>
+            <button type="submit" class="btn btn-primary">Post</button>
             <a href="index.html" class="btn btn-outline">Cancel</a>
           </div>
-
         </form>
-
       </section>
-
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#">Terms</a>
@@ -79,6 +86,5 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
-
   </body>
 </html>

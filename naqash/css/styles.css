@@ -302,6 +302,27 @@ footer {
   margin-bottom: 10px;
 }
 
+
+/* Back button style */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.back-btn:hover {
+  background-color: #f3f4f6;
+  color: #0079d3; /* matches your blue theme */
+}
+
 /* post page */
 
 .post-body {

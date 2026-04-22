@@ -2,26 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>r/WebDev - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <header>
-      <div class="header-top">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-shell">
         <a href="index.html" class="nav-brand">Naqash</a>
-        <input
-          type="text"
-          class="search-bar"
-          placeholder="Search r/WebDev..."
-        />
+
+        <form class="search-form">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search r/WebDev..."
+          />
+        </form>
+
         <div class="nav-links">
-          <a href="#" class="btn btn-outline">Login</a>
-          <a href="#" class="btn btn-primary">Register</a>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="register.html" class="btn btn-primary">Register</a>
         </div>
       </div>
     </header>
 
+    <!-- BACK BUTTON (ALIGNED WITH CONTENT) -->
+    <div class="page-topbar">
+      <a href="./index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <!-- COMMUNITY BANNER -->
     <div class="community-banner"></div>
+
+    <!-- COMMUNITY HEADER -->
     <div class="community-header">
       <div>
         <h1>r/WebDev</h1>
@@ -29,59 +44,51 @@
           A community dedicated to all things web development.
         </p>
       </div>
+
       <div class="community-stats">
         <p>12,340 Members</p>
-        <button class="btn btn-primary">Join Community</button>
+        <button class="btn btn-primary" type="button">Join Community</button>
       </div>
     </div>
 
+    <!-- MAIN CONTENT -->
     <div class="container layout-2-cols">
+      
+      <!-- FEED -->
       <main class="feed">
         <article class="card post-card">
           <div class="post-main-content">
-            <div class="post-header">Posted by u/frontend_wizard 1h ago</div>
-            <a href="#" class="post-title"
-              >My first HTML/CSS project is live!</a
-            >
-          </div>
-          <div class="vote-section">
-            <button class="vote-btn">▲</button>
-            <span class="vote-count">88</span>
-            <button class="vote-btn">▼</button>
-            <span class="footer-meta">
-              <img
-                src="images/comment.png"
-                alt="Comments"
-                class="comment-icon"
-              />
-              22 Comments
-            </span>
-          </div>
-        </article>
+            <div class="post-header">
+              Posted by u/frontend_dev 2h ago
+            </div>
 
-        <article class="card post-card">
-          <div class="post-main-content">
-            <div class="post-header">Posted by u/backend_guy 3h ago</div>
-            <a href="#" class="post-title"
-              >How do you center a div? Wrong answers only.</a
-            >
+            <a href="post.html" class="post-title">
+              Is CSS Grid better than Flexbox?
+            </a>
+
+            <p class="post-body">
+              This is a discussion about layout systems in modern web development.
+            </p>
           </div>
+
           <div class="vote-section">
-            <button class="vote-btn">▲</button>
-            <span class="vote-count">320</span>
-            <button class="vote-btn">▼</button>
+            <button class="vote-btn" type="button">▲</button>
+            <span class="vote-count">245</span>
+            <button class="vote-btn" type="button">▼</button>
+
             <span class="footer-meta">
               <img
                 src="images/comment.png"
                 alt="Comments"
                 class="comment-icon"
               />
-              112 Comments
+              2 Comments
             </span>
           </div>
         </article>
       </main>
 
+      <!-- SIDEBAR -->
       <aside class="sidebar card">
         <h3>Community Rules</h3>
         <ol class="rules-list">
@@ -89,18 +96,23 @@
           <li>No spam or self-promotion.</li>
           <li>Format code correctly.</li>
         </ol>
+
         <hr class="sidebar-divider" />
+
         <h3>Moderators</h3>
         <ul>
-          <li><a href="#">u/admin</a></li>
-          <li><a href="#">u/webmaster</a></li>
+          <li><a href="profile.html">u/username</a></li>
         </ul>
       </aside>
+
     </div>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
       <div class="footer-links">
-        <a href="#">About</a> <a href="#">Terms</a> <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
