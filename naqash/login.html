@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - Naqash</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="homepage.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <main class="container layout-single">
+      <div class="card auth-wrapper">
+        <h2 class="auth-title">Login</h2>
+
+        <form action="homepage.html">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="form-input"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-input"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary block-btn">Login</button>
+        </form>
+
+        <div class="auth-footer">
+          Don't have an account? <a href="register.html">Register here</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
+</html>

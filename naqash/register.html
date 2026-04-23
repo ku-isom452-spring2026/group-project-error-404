@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register - Naqash</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="homepage.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <main class="container layout-single">
+      <div class="card auth-wrapper">
+        <h2 class="auth-title">Create Account</h2>
+
+        <form action="login.html">
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input
+              type="text"
+              id="reg-username"
+              class="form-input"
+              placeholder="Choose a username"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input
+              type="email"
+              id="reg-email"
+              class="form-input"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input
+              type="password"
+              id="reg-password"
+              class="form-input"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-input"
+              placeholder="Repeat your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary block-btn">
+            Register
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Already have an account? <a href="login.html">Login here</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Naqash Platform</p>
+    </footer>
+  </body>
+</html>
