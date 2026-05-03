@@ -1164,3 +1164,160 @@ details p {
   text-decoration: none;
   font-weight: 600;
 }
+
+.page-layout {
+  display: flex !important;
+  width: 100%;
+}
+
+.main-sidebar {
+  width: 240px !important;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #cccccc;
+  padding: 28px 24px;
+  flex-shrink: 0;
+}
+
+.main-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.main-sidebar nav a {
+  display: block !important;
+  color: #1c1c1c;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-sidebar nav a:hover {
+  color: #0079d3;
+}
+
+.page-layout .container {
+  flex: 1;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile sidebar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .page-layout {
+    display: block !important;
+  }
+
+  .main-sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    height: 100%;
+    z-index: 2000;
+    transition: left 0.3s ease;
+  }
+
+  .main-sidebar.active {
+    left: 0;
+  }
+}
+
+/* Homepage sidebar bullet fix */
+.main-sidebar ul,
+.main-sidebar li {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.main-sidebar a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.main-sidebar a:hover {
+  color: #0079d3;
+}
+
+/* Homepage content layout fix */
+.homepage-content {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 320px !important;
+  gap: 24px;
+  padding: 24px;
+   align-items: start;
+}
+
+.homepage-content .feed {
+  padding: 0;
+}
+
+.homepage-content .sidebar {
+  height: auto;
+}
+
+/* Sidebar spacing fix */
+.main-sidebar nav a {
+  display: block;
+  padding: 10px 0;   /* vertical space */
+  margin-bottom: 8px; /* extra spacing between links */
+  font-size: 18px;
+}
+
+.main-sidebar nav a:hover {
+  background-color: #f2f2f2;
+  padding-left: 8px;
+  border-radius: 6px;
+}
+
+/* Force spacing for homepage navigation list */
+.main-sidebar .nav-list li {
+  margin-bottom: 14px !important;
+}
+
+.main-sidebar .nav-list a {
+  display: block !important;
+  padding: 6px 0 !important;
+  font-size: 18px !important;
+  text-decoration: none;
+}
+
+/* Better sidebar spacing */
+.main-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.main-sidebar nav a {
+  padding: 4px 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Fix create post layout */
+.page-layout .feed {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.create-post-box {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+}
+
