@@ -14,8 +14,11 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
         <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <form class="search-form">
@@ -36,90 +39,106 @@
       </div>
     </header>
 
-    <main id="main-content" class="container">
-      <section class="search-hero card">
-        <p class="eyebrow">Search Results</p>
-        <h1>Results for "CSS Grid"</h1>
-        <p class="lead">
-          Explore the most relevant discussions, communities, and contributors.
-        </p>
-      </section>
+    <div class="page-layout">
+      <!-- MAIN NAVIGATION SIDEBAR -->
+      <aside class="main-sidebar" id="sidebar">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="community.html">Communities</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+        </nav>
+      </aside>
 
-      <nav class="pill-nav card">
-        <a href="search.html" class="pill-link is-active">Posts</a>
-        <a href="search.html" class="pill-link">Communities</a>
-        <a href="search.html" class="pill-link">Users</a>
-      </nav>
+      <main id="main-content" class="container">
+        <section class="search-hero card">
+          <p class="eyebrow">Search Results</p>
+          <h1>Results for "CSS Grid"</h1>
+          <p class="lead">
+            Explore the most relevant discussions, communities, and contributors.
+          </p>
+        </section>
 
-      <section class="card search-toolbar">
-        <div class="toolbar-group">
-          <label>Sort by</label>
-          <select class="search-select">
-            <option>Relevance</option>
-            <option>Newest</option>
-            <option>Top</option>
-          </select>
-        </div>
+        <nav class="pill-nav card">
+          <a href="search.html" class="pill-link is-active">Posts</a>
+          <a href="search.html" class="pill-link">Communities</a>
+          <a href="search.html" class="pill-link">Users</a>
+        </nav>
 
-        <div class="toolbar-group">
-          <span class="toolbar-label">Categories</span>
-          <div class="chip-row">
-            <a href="community.html" class="filter-chip is-active">Technology</a>
+        <section class="card search-toolbar">
+          <div class="toolbar-group">
+            <label>Sort by</label>
+            <select class="search-select">
+              <option>Relevance</option>
+              <option>Newest</option>
+              <option>Top</option>
+            </select>
           </div>
-        </div>
-      </section>
 
-      <section class="search-layout">
-        <div class="feed-stack">
-          <article class="card result-card">
-            <div class="post-topline">
-              <span class="post-community">
-                Posted in <a href="community.html">r/WebDev</a>
-              </span>
-              <span class="post-time">2 hours ago</span>
+          <div class="toolbar-group">
+            <span class="toolbar-label">Categories</span>
+            <div class="chip-row">
+              <a href="community.html" class="filter-chip is-active">Technology</a>
             </div>
+          </div>
+        </section>
 
-            <h2 class="post-title">
-              <a href="post.html">Is CSS Grid better than Flexbox?</a>
-            </h2>
-
-            <p class="post-excerpt">
-              This is a discussion about layout systems in modern web development.
-            </p>
-
-            <div class="post-footer">
-              <div class="vote-group">
-                <button class="vote-btn">▲</button>
-                <span class="vote-count">245</span>
-                <button class="vote-btn">▼</button>
+        <section class="search-layout">
+          <div class="feed-stack">
+            <article class="card result-card">
+              <div class="post-topline">
+                <span class="post-community">
+                  Posted in <a href="community.html">r/WebDev</a>
+                </span>
+                <span class="post-time">2 hours ago</span>
               </div>
 
-              <div class="result-meta">
-                <a href="post.html">2 comments</a>
+              <h2 class="post-title">
+                <a href="post.html">Is CSS Grid better than Flexbox?</a>
+              </h2>
+
+              <p class="post-excerpt">
+                This is a discussion about layout systems in modern web development.
+              </p>
+
+              <div class="post-footer">
+                <div class="vote-group">
+                  <button class="vote-btn">▲</button>
+                  <span class="vote-count">245</span>
+                  <button class="vote-btn">▼</button>
+                </div>
+
+                <div class="result-meta">
+                  <a href="post.html">2 comments</a>
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
+            </article>
+          </div>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar-stack">
-          <section class="card sidebar-card">
-            <h2>Popular Categories</h2>
-            <ul class="feature-list compact-list sidebar-list">
-              <li><a href="community.html">Technology</a></li>
-            </ul>
-          </section>
+          <!-- SEARCH INFO SIDEBAR -->
+          <aside class="sidebar-stack">
+            <section class="card sidebar-card">
+              <h2>Popular Categories</h2>
+              <ul class="feature-list compact-list sidebar-list">
+                <li><a href="community.html">Technology</a></li>
+              </ul>
+            </section>
 
-          <section class="card sidebar-card">
-            <h2>Trending Communities</h2>
-            <ul class="feature-list compact-list sidebar-list">
-              <li><a href="community.html">r/WebDev</a></li>
-            </ul>
-          </section>
-        </aside>
-      </section>
-    </main>
+            <section class="card sidebar-card">
+              <h2>Trending Communities</h2>
+              <ul class="feature-list compact-list sidebar-list">
+                <li><a href="community.html">r/WebDev</a></li>
+              </ul>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
@@ -128,5 +147,6 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

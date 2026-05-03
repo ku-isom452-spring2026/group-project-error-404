@@ -6,9 +6,13 @@
     <title>Post - Naqash</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
+    <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
         <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <form action="search.html" method="GET" class="search-form">
@@ -28,61 +32,79 @@
       </div>
     </header>
 
+    <!-- BACK BUTTON -->
     <div class="page-topbar">
       <a href="homepage.html" class="back-btn">← Back to Home</a>
     </div>
 
-    <main class="feed">
-      <article class="card post-card">
-        <div class="post-main-content">
-          <div class="post-header">
-            r/WebDev • Posted by u/username • 2h ago
+    <div class="page-layout">
+      <!-- SIDEBAR -->
+      <aside class="main-sidebar" id="sidebar">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="community.html">Communities</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="feed">
+        <article class="card post-card">
+          <div class="post-main-content">
+            <div class="post-header">
+              r/WebDev • Posted by u/username • 2h ago
+            </div>
+
+            <a href="post.html" class="post-title">
+              Is CSS Grid better than Flexbox?
+            </a>
+
+            <p class="post-body">
+              This is a discussion about layout systems in modern web development.
+            </p>
           </div>
 
-          <a href="post.html" class="post-title">
-            Is CSS Grid better than Flexbox?
-          </a>
+          <div class="vote-section">
+            <button class="vote-btn" type="button">▲</button>
+            <span class="vote-count">245</span>
+            <button class="vote-btn" type="button">▼</button>
 
-          <p class="post-body">
-            This is a discussion about layout systems in modern web development.
-          </p>
-        </div>
+            <span class="footer-meta">2 Comments</span>
+            <span class="footer-meta">Share</span>
+            <span class="footer-meta">Save</span>
+          </div>
+        </article>
 
-        <div class="vote-section">
-          <button class="vote-btn" type="button">▲</button>
-          <span class="vote-count">245</span>
-          <button class="vote-btn" type="button">▼</button>
+        <section class="card comment-box">
+          <h3>Add a comment</h3>
+          <textarea
+            class="comment-input"
+            placeholder="Write your comment..."
+          ></textarea>
+          <div class="comment-actions">
+            <button class="btn btn-primary" type="button">Submit</button>
+          </div>
+        </section>
 
-          <span class="footer-meta">2 Comments</span>
-          <span class="footer-meta">Share</span>
-          <span class="footer-meta">Save</span>
-        </div>
-      </article>
+        <section class="card comments-section">
+          <div class="comment">
+            <strong>u/user1:</strong>
+            <p>I prefer Grid for layout!</p>
+          </div>
 
-      <section class="card comment-box">
-        <h3>Add a comment</h3>
-        <textarea
-          class="comment-input"
-          placeholder="Write your comment..."
-        ></textarea>
-        <div class="comment-actions">
-          <button class="btn btn-primary" type="button">Submit</button>
-        </div>
-      </section>
+          <div class="comment reply">
+            <strong>u/user2:</strong>
+            <p>Flexbox is easier</p>
+          </div>
+        </section>
+      </main>
+    </div>
 
-      <section class="card comments-section">
-        <div class="comment">
-          <strong>u/user1:</strong>
-          <p>I prefer Grid for layout!</p>
-        </div>
-
-        <div class="comment reply">
-          <strong>u/user2:</strong>
-          <p>Flexbox is easier</p>
-        </div>
-      </section>
-    </main>
-
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-links">
         <a href="about.html">About</a>
@@ -91,5 +113,6 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

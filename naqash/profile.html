@@ -17,6 +17,8 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
         <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <!-- search form -->
@@ -37,113 +39,128 @@
       </div>
     </header>
 
-    <!-- back to home buttons -->
+    <!-- back to home button -->
     <div class="page-topbar">
       <a href="homepage.html" class="back-btn">← Back to Home</a>
     </div>
 
-    <main id="main-content" class="container">
-      <!-- PROFILE HEADER -->
-      <section class="profile-hero card">
-        <div class="profile-avatar">UN</div>
+    <div class="page-layout">
+      <!-- MAIN NAVIGATION SIDEBAR -->
+      <aside class="main-sidebar" id="sidebar">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="community.html">Communities</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+        </nav>
+      </aside>
 
-        <div class="profile-copy">
-          <p class="eyebrow">Profile Overview</p>
-          <h1>u/username</h1>
-          <p class="lead profile-bio">
-            Frontend enthusiast sharing experiments and ideas about web development.
-          </p>
+      <main id="main-content" class="container">
+        <!-- PROFILE HEADER -->
+        <section class="profile-hero card">
+          <div class="profile-avatar">UN</div>
 
-          <div class="profile-meta">
-            <span>Joined: October 13, 2023</span>
-            <span>Based in Kuwait City</span>
-            <span>1.2k reputation</span>
+          <div class="profile-copy">
+            <p class="eyebrow">Profile Overview</p>
+            <h1>u/username</h1>
+            <p class="lead profile-bio">
+              Frontend enthusiast sharing experiments and ideas about web development.
+            </p>
+
+            <div class="profile-meta">
+              <span>Joined: October 13, 2023</span>
+              <span>Based in Kuwait City</span>
+              <span>1.2k reputation</span>
+            </div>
           </div>
-        </div>
 
-        <div class="profile-cta">
-          <button type="button" class="btn btn-primary">Follow</button>
-          <button type="button" class="btn btn-outline">Message</button>
-        </div>
-      </section>
+          <div class="profile-cta">
+            <button type="button" class="btn btn-primary">Follow</button>
+            <button type="button" class="btn btn-outline">Message</button>
+          </div>
+        </section>
 
-      <!-- STATS -->
-      <section class="stats-grid">
-        <article class="card stat-card">
-          <p class="stat-label">Posts</p>
-          <p class="stat-value">1</p>
-        </article>
-
-        <article class="card stat-card">
-          <p class="stat-label">Comments</p>
-          <p class="stat-value">0</p>
-        </article>
-
-        <article class="card stat-card">
-          <p class="stat-label">Communities</p>
-          <p class="stat-value">1</p>
-        </article>
-      </section>
-
-      <!-- TABS -->
-      <nav class="pill-nav card">
-        <a href="profile.html" class="pill-link is-active">My Posts</a>
-        <a href="dashboard.html" class="pill-link">Saved Posts</a>
-        <a href="dashboard.html" class="pill-link">Settings</a>
-      </nav>
-
-      <!-- CONTENT -->
-      <section class="profile-layout">
-        <div class="feed-stack">
-          <article class="card post-card">
-            <div class="post-topline">
-              <span class="post-community">
-                Posted in <a href="community.html">r/WebDev</a>
-              </span>
-              <span class="post-time">2 hours ago</span>
-            </div>
-
-            <h2 class="post-title">
-              <a href="post.html">Is CSS Grid better than Flexbox?</a>
-            </h2>
-
-            <p class="post-excerpt">
-              This is a discussion about layout systems in modern web development.
-            </p>
-
-            <div class="post-footer">
-              <div class="vote-group">
-                <button class="vote-btn" type="button">▲</button>
-                <span class="vote-count">245</span>
-                <button class="vote-btn" type="button">▼</button>
-              </div>
-
-              <div class="post-actions">
-                <a href="create-post.html">Edit</a>
-                <a href="dashboard.html">Delete</a>
-              </div>
-            </div>
+        <!-- STATS -->
+        <section class="stats-grid">
+          <article class="card stat-card">
+            <p class="stat-label">Posts</p>
+            <p class="stat-value">1</p>
           </article>
-        </div>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar-stack">
-          <section class="card sidebar-card">
-            <h2>About me</h2>
-            <p>
-              Interested in UI design, communities, and web development.
-            </p>
-          </section>
+          <article class="card stat-card">
+            <p class="stat-label">Comments</p>
+            <p class="stat-value">0</p>
+          </article>
 
-          <section class="card sidebar-card">
-            <h2>Top Communities</h2>
-            <ul class="feature-list compact-list">
-              <li><a href="community.html">r/WebDev</a></li>
-            </ul>
-          </section>
-        </aside>
-      </section>
-    </main>
+          <article class="card stat-card">
+            <p class="stat-label">Communities</p>
+            <p class="stat-value">1</p>
+          </article>
+        </section>
+
+        <!-- TABS -->
+        <nav class="pill-nav card">
+          <a href="profile.html" class="pill-link is-active">My Posts</a>
+          <a href="dashboard.html" class="pill-link">Saved Posts</a>
+          <a href="dashboard.html" class="pill-link">Settings</a>
+        </nav>
+
+        <!-- CONTENT -->
+        <section class="profile-layout">
+          <div class="feed-stack">
+            <article class="card post-card">
+              <div class="post-topline">
+                <span class="post-community">
+                  Posted in <a href="community.html">r/WebDev</a>
+                </span>
+                <span class="post-time">2 hours ago</span>
+              </div>
+
+              <h2 class="post-title">
+                <a href="post.html">Is CSS Grid better than Flexbox?</a>
+              </h2>
+
+              <p class="post-excerpt">
+                This is a discussion about layout systems in modern web development.
+              </p>
+
+              <div class="post-footer">
+                <div class="vote-group">
+                  <button class="vote-btn" type="button">▲</button>
+                  <span class="vote-count">245</span>
+                  <button class="vote-btn" type="button">▼</button>
+                </div>
+
+                <div class="post-actions">
+                  <a href="create-post.html">Edit</a>
+                  <a href="dashboard.html">Delete</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- PROFILE INFO SIDEBAR -->
+          <aside class="sidebar-stack">
+            <section class="card sidebar-card">
+              <h2>About me</h2>
+              <p>
+                Interested in UI design, communities, and web development.
+              </p>
+            </section>
+
+            <section class="card sidebar-card">
+              <h2>Top Communities</h2>
+              <ul class="feature-list compact-list">
+                <li><a href="community.html">r/WebDev</a></li>
+              </ul>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -154,5 +171,6 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

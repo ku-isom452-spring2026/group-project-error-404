@@ -11,8 +11,10 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
-        <a href="homepage.html" class="nav-brand">Naqash</a>
+        <!-- ✅ hamburger added -->
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
 
+        <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <form action="search.html" method="GET" class="search-form">
           <input
@@ -31,11 +33,9 @@
       </div>
     </header>
 
-    <!-- MAIN LAYOUT -->
-    <div class="container layout-3-cols">
-
-      <!-- LEFT SIDEBAR -->
-      <aside class="sidebar card">
+    <div class="page-layout">
+      <!-- ✅ MAIN SIDEBAR (converted from your left sidebar) -->
+      <aside class="main-sidebar" id="sidebar">
         <h3>Navigation</h3>
         <ul class="nav-list">
           <li><a href="homepage.html">Home</a></li>
@@ -53,60 +53,64 @@
         </ul>
       </aside>
 
-      <!-- MAIN FEED -->
-      <main class="feed">
-        <article class="card post-card">
-          <div class="post-main-content">
-            <div class="post-header">r/WebDev • 2h ago</div>
+      <!-- MAIN LAYOUT -->
+      <div class="container homepage-content">
 
-            <a href="post.html" class="post-title">
-              Is CSS Grid better than Flexbox?
-            </a>
+        <!-- FEED -->
+        <main class="feed">
+          <article class="card post-card">
+            <div class="post-main-content">
+              <div class="post-header">r/WebDev • 2h ago</div>
 
-            <p class="post-body">
-              This is a discussion about layout systems in modern web development.
+              <a href="post.html" class="post-title">
+                Is CSS Grid better than Flexbox?
+              </a>
+
+              <p class="post-body">
+                This is a discussion about layout systems in modern web development.
+              </p>
+            </div>
+
+            <div class="vote-section">
+              <button class="vote-btn" type="button">▲</button>
+              <span class="vote-count">245</span>
+              <button class="vote-btn" type="button">▼</button>
+
+              <span class="footer-meta">
+                <img
+                  src="images/comment.png"
+                  alt="Comments"
+                  class="comment-icon"
+                />
+                2 Comments
+              </span>
+            </div>
+          </article>
+        </main>
+
+        <!-- RIGHT SIDEBAR (keep as is) -->
+        <aside class="sidebar card">
+          <h3>Trending</h3>
+          <ul>
+            <li>#Coding</li>
+            <li>#KuwaitTech</li>
+          </ul>
+
+          <hr class="sidebar-divider" />
+
+          <a href="create-post.html" class="btn btn-primary block-btn">
+            Create Post
+          </a>
+
+          <div class="sidebar-rules">
+            <h3>Rules</h3>
+            <p class="rules-text">
+              Follow the community guidelines.
             </p>
           </div>
+        </aside>
 
-          <div class="vote-section">
-            <button class="vote-btn" type="button">▲</button>
-            <span class="vote-count">245</span>
-            <button class="vote-btn" type="button">▼</button>
-
-            <span class="footer-meta">
-              <img
-                src="images/comment.png"
-                alt="Comments"
-                class="comment-icon"
-              />
-              2 Comments
-            </span>
-          </div>
-        </article>
-      </main>
-
-      <!-- RIGHT SIDEBAR -->
-      <aside class="sidebar card">
-        <h3>Trending</h3>
-        <ul>
-          <li>#Coding</li>
-          <li>#KuwaitTech</li>
-        </ul>
-
-        <hr class="sidebar-divider" />
-
-        <a href="create-post.html" class="btn btn-primary block-btn">
-          Create Post
-        </a>
-
-        <div class="sidebar-rules">
-          <h3>Rules</h3>
-          <p class="rules-text">
-            Follow the community guidelines.
-          </p>
-        </div>
-      </aside>
-
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -118,5 +122,6 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

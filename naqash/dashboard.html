@@ -11,6 +11,8 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
         <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <!-- SEARCH -->
@@ -36,96 +38,111 @@
       <a href="homepage.html" class="back-btn">← Back to Home</a>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="feed">
-      <section class="card dashboard-header">
-        <div class="dashboard-profile">
-          <img
-            src="images/profile.jpg"
-            alt="Profile Picture"
-            class="profile-picture"
-          />
-          <div class="profile-info">
-            <h2>u/user</h2>
-            <p>Manage your posts, saved content, and account settings.</p>
+    <div class="page-layout">
+      <!-- SIDEBAR -->
+      <aside class="main-sidebar" id="sidebar">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="community.html">Communities</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="feed">
+        <section class="card dashboard-header">
+          <div class="dashboard-profile">
+            <img
+              src="images/profile.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <div class="profile-info">
+              <h2>u/user</h2>
+              <p>Manage your posts, saved content, and account settings.</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="card dashboard-tabs">
-        <div class="tabs">
-          <button class="tab-btn" type="button">My Posts</button>
-          <button class="tab-btn" type="button">Saved Posts</button>
-          <button class="tab-btn" type="button">Settings</button>
-        </div>
-      </section>
-
-      <section class="card dashboard-section">
-        <h3>My Posts</h3>
-
-        <article class="dashboard-post">
-          <div class="dashboard-post-info">
-            <a href="post.html" class="post-title">
-              Is CSS Grid better than Flexbox?
-            </a>
-            <p class="post-header">r/WebDev • 2h ago • ▲ 245</p>
+        <section class="card dashboard-tabs">
+          <div class="tabs">
+            <button class="tab-btn" type="button">My Posts</button>
+            <button class="tab-btn" type="button">Saved Posts</button>
+            <button class="tab-btn" type="button">Settings</button>
           </div>
-          <div class="dashboard-post-actions">
-            <a href="create-post.html" class="btn btn-outline">Edit</a>
-            <button class="btn btn-primary" type="button">Delete</button>
-          </div>
-        </article>
-      </section>
+        </section>
 
-      <section class="card dashboard-section">
-        <h3>Saved Posts</h3>
+        <section class="card dashboard-section">
+          <h3>My Posts</h3>
 
-        <article class="dashboard-post">
-          <div class="dashboard-post-info">
-            <a href="post.html" class="post-title">
-              Is CSS Grid better than Flexbox?
-            </a>
-            <p class="post-header">r/WebDev • saved recently</p>
-          </div>
-        </article>
-      </section>
+          <article class="dashboard-post">
+            <div class="dashboard-post-info">
+              <a href="post.html" class="post-title">
+                Is CSS Grid better than Flexbox?
+              </a>
+              <p class="post-header">r/WebDev • 2h ago • ▲ 245</p>
+            </div>
+            <div class="dashboard-post-actions">
+              <a href="create-post.html" class="btn btn-outline">Edit</a>
+              <button class="btn btn-primary" type="button">Delete</button>
+            </div>
+          </article>
+        </section>
 
-      <section class="card dashboard-section">
-        <h3>Account Settings</h3>
+        <section class="card dashboard-section">
+          <h3>Saved Posts</h3>
 
-        <form class="settings-form">
-          <label for="display-name">Display Name</label>
-          <input
-            type="text"
-            id="display-name"
-            class="form-input"
-            placeholder="Enter display name"
-            value="user"
-          />
+          <article class="dashboard-post">
+            <div class="dashboard-post-info">
+              <a href="post.html" class="post-title">
+                Is CSS Grid better than Flexbox?
+              </a>
+              <p class="post-header">r/WebDev • saved recently</p>
+            </div>
+          </article>
+        </section>
 
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            class="form-input"
-            placeholder="Enter email"
-            value="user@example.com"
-          />
+        <section class="card dashboard-section">
+          <h3>Account Settings</h3>
 
-          <label for="password">New Password</label>
-          <input
-            type="password"
-            id="password"
-            class="form-input"
-            placeholder="Enter new password"
-          />
+          <form class="settings-form">
+            <label for="display-name">Display Name</label>
+            <input
+              type="text"
+              id="display-name"
+              class="form-input"
+              placeholder="Enter display name"
+              value="user"
+            />
 
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save Changes</button>
-          </div>
-        </form>
-      </section>
-    </main>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter email"
+              value="user@example.com"
+            />
+
+            <label for="password">New Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-input"
+              placeholder="Enter new password"
+            />
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -136,5 +153,7 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

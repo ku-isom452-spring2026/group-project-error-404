@@ -17,6 +17,8 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="header-shell">
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
         <a href="homepage.html" class="nav-brand">Naqash</a>
 
         <!-- search form -->
@@ -42,123 +44,138 @@
       <a href="homepage.html" class="back-btn">← Back to Home</a>
     </div>
 
-    <main id="main-content" class="container">
-      <!-- HERO -->
-      <section class="about-hero card">
-        <p class="eyebrow">Built for Meaningful Conversations</p>
-        <h1>About Naqash</h1>
-        <p class="lead">
-          Naqash is a modern discussion platform designed to help people share
-          ideas, ask better questions, and grow communities around common
-          interests.
-        </p>
+    <div class="page-layout">
+      <!-- SIDEBAR -->
+      <aside class="main-sidebar" id="sidebar">
+        <nav>
+          <a href="homepage.html">Home</a>
+          <a href="community.html">Communities</a>
+          <a href="create-post.html">Create Post</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html">Profile</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+        </nav>
+      </aside>
 
-        <div class="hero-actions">
-          <a href="register.html" class="btn btn-primary">Join the Community</a>
-          <a href="#mission" class="btn btn-outline">Learn More</a>
-        </div>
-      </section>
-
-      <!-- STATS -->
-      <section class="stats-grid">
-        <article class="card stat-card">
-          <p class="stat-label">Focused Topics</p>
-          <p class="stat-value">1</p>
-        </article>
-
-        <article class="card stat-card">
-          <p class="stat-label">Active Discussions</p>
-          <p class="stat-value">1</p>
-        </article>
-
-        <article class="card stat-card">
-          <p class="stat-label">Growing Communities</p>
-          <p class="stat-value">1</p>
-        </article>
-      </section>
-
-      <!-- MISSION -->
-      <section id="mission" class="card about-section">
-        <h2>Our Mission</h2>
-        <p>
-          We built Naqash to create a more thoughtful kind of social platform.
-          Instead of rewarding noise, we aim to support useful conversations,
-          trusted communities, and content that helps people learn from each other.
-        </p>
-      </section>
-
-      <!-- INFO -->
-      <section class="about-grid">
-        <article class="card about-section">
-          <h2>What Makes It Different</h2>
-          <p>
-            Naqash blends the energy of open forums with a cleaner, more focused
-            user experience.
+      <main id="main-content" class="container">
+        <!-- HERO -->
+        <section class="about-hero card">
+          <p class="eyebrow">Built for Meaningful Conversations</p>
+          <h1>About Naqash</h1>
+          <p class="lead">
+            Naqash is a modern discussion platform designed to help people share
+            ideas, ask better questions, and grow communities around common
+            interests.
           </p>
-        </article>
 
-        <article class="card about-section">
-          <h2>Who It Is For</h2>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary">Join the Community</a>
+            <a href="#mission" class="btn btn-outline">Learn More</a>
+          </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats-grid">
+          <article class="card stat-card">
+            <p class="stat-label">Focused Topics</p>
+            <p class="stat-value">1</p>
+          </article>
+
+          <article class="card stat-card">
+            <p class="stat-label">Active Discussions</p>
+            <p class="stat-value">1</p>
+          </article>
+
+          <article class="card stat-card">
+            <p class="stat-label">Growing Communities</p>
+            <p class="stat-value">1</p>
+          </article>
+        </section>
+
+        <!-- MISSION -->
+        <section id="mission" class="card about-section">
+          <h2>Our Mission</h2>
           <p>
-            Naqash gives people a place to contribute, learn, and connect with
-            others around shared interests.
+            We built Naqash to create a more thoughtful kind of social platform.
+            Instead of rewarding noise, we aim to support useful conversations,
+            trusted communities, and content that helps people learn from each other.
           </p>
-        </article>
-      </section>
+        </section>
 
-      <!-- FEATURES -->
-      <section class="card about-section">
-        <h2>Key Features</h2>
-        <ul class="feature-list">
-          <li>Create and share posts.</li>
-          <li>Vote on content.</li>
-          <li>Join communities.</li>
-          <li>Comment and interact.</li>
-        </ul>
-      </section>
+        <!-- INFO -->
+        <section class="about-grid">
+          <article class="card about-section">
+            <h2>What Makes It Different</h2>
+            <p>
+              Naqash blends the energy of open forums with a cleaner, more focused
+              user experience.
+            </p>
+          </article>
 
-      <!-- VALUES -->
-      <section class="about-grid">
-        <article class="card about-section">
-          <h2>Our Values</h2>
+          <article class="card about-section">
+            <h2>Who It Is For</h2>
+            <p>
+              Naqash gives people a place to contribute, learn, and connect with
+              others around shared interests.
+            </p>
+          </article>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="card about-section">
+          <h2>Key Features</h2>
           <ul class="feature-list">
-            <li>Respectful conversations.</li>
-            <li>Clear community structure.</li>
-            <li>Simple and useful tools.</li>
+            <li>Create and share posts.</li>
+            <li>Vote on content.</li>
+            <li>Join communities.</li>
+            <li>Comment and interact.</li>
           </ul>
-        </article>
+        </section>
 
-        <article class="card about-section">
-          <h2>Looking Ahead</h2>
+        <!-- VALUES -->
+        <section class="about-grid">
+          <article class="card about-section">
+            <h2>Our Values</h2>
+            <ul class="feature-list">
+              <li>Respectful conversations.</li>
+              <li>Clear community structure.</li>
+              <li>Simple and useful tools.</li>
+            </ul>
+          </article>
+
+          <article class="card about-section">
+            <h2>Looking Ahead</h2>
+            <p>
+              We aim to grow Naqash into a platform where meaningful communities thrive.
+            </p>
+          </article>
+        </section>
+
+        <!-- FAQ -->
+        <section class="card about-section">
+          <h2>Help & FAQ</h2>
+          <details>
+            <summary>How do I create a new post?</summary>
+            <p>Go to the Create Post page and submit your content.</p>
+          </details>
+        </section>
+
+        <!-- CTA -->
+        <section class="card about-cta">
+          <h2>Ready to Join the Conversation?</h2>
           <p>
-            We aim to grow Naqash into a platform where meaningful communities thrive.
+            Explore communities or contact us at
+            <a href="mailto:support@naqash.com">support@naqash.com</a>.
           </p>
-        </article>
-      </section>
 
-      <!-- FAQ -->
-      <section class="card about-section">
-        <h2>Help & FAQ</h2>
-        <details>
-          <summary>How do I create a new post?</summary>
-          <p>Go to the Create Post page and submit your content.</p>
-        </details>
-      </section>
-
-      <!-- CTA -->
-      <section class="card about-cta">
-        <h2>Ready to Join the Conversation?</h2>
-        <p>
-          Explore communities or contact us at
-          <a href="mailto:support@naqash.com">support@naqash.com</a>.
-        </p>
-
-        <div class="hero-actions">
-          <a href="register.html" class="btn btn-primary">Create an Account</a>
-          <a href="search.html" class="btn btn-outline">Explore Topics</a>
-        </div>
-      </section>
-    </main>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary">Create an Account</a>
+            <a href="search.html" class="btn btn-outline">Explore Topics</a>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -169,5 +186,6 @@
       </div>
       <p>&copy; 2026 Naqash Platform</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
