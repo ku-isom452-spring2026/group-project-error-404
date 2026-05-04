@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
-        window.location.href = "homepage.html";
+        showToast("Logging in...");
+        setTimeout(() => window.location.href = "homepage.html", 1000);
       }
     });
   }
@@ -221,6 +222,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (commentInput.value.trim() === "") {
         showError(commentInput, "Comment cannot be empty.");
       } else {
+        const commentsList = document.getElementById("comments-list");
+        if (commentsList) {
+          const newComment = document.createElement("div");
+          newComment.className = "comment";
+          
+          const strong = document.createElement("strong");
+          strong.textContent = "u/CurrentUser:";
+          
+          const p = document.createElement("p");
+          p.textContent = commentInput.value.trim();
+          
+          newComment.appendChild(strong);
+          newComment.appendChild(p);
+          
+          commentsList.insertBefore(newComment, commentsList.firstChild);
+        }
+
         showToast("Comment posted successfully!");
         commentInput.value = "";
       }
