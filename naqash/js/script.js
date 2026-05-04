@@ -101,7 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
-        window.location.href = "login.html";
+        showToast("Registration successful!");
+        setTimeout(() => window.location.href = "login.html", 1000);
       }
     });
   }
@@ -177,7 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
-        window.location.href = "homepage.html";
+        showToast("Posting...");
+        setTimeout(() => window.location.href = "homepage.html", 1000);
       }
     });
   }
@@ -204,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
-        alert("Settings saved successfully!");
+        showToast("Settings saved successfully!");
       }
     });
   }
@@ -219,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (commentInput.value.trim() === "") {
         showError(commentInput, "Comment cannot be empty.");
       } else {
-        alert("Comment posted successfully!");
+        showToast("Comment posted successfully!");
         commentInput.value = "";
       }
     });
@@ -236,6 +238,51 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault();
           showError(searchInput, "Please enter a search term.");
         }
+      }
+    });
+  });
+
+  // Toast Notification System
+  window.showToast = function(message) {
+    let container = document.getElementById("toast-container");
+    if (!container) {
+      container = document.createElement("div");
+      container.id = "toast-container";
+      document.body.appendChild(container);
+    }
+    
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    
+    container.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.remove();
+      if (container.childElementCount === 0) {
+        container.remove();
+      }
+    }, 3000);
+  };
+
+  // Active Navigation State
+  const currentPath = window.location.pathname.split("/").pop() || "homepage.html";
+  const navLinks = document.querySelectorAll("#sidebar nav a");
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+
+  // Password Visibility Toggle
+  const togglePasswords = document.querySelectorAll(".toggle-password");
+  togglePasswords.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const input = btn.previousElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
       }
     });
   });
