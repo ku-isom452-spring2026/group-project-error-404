@@ -179,6 +179,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
+        const posts = JSON.parse(localStorage.getItem('naqash_posts') || '[]');
+        
+        let contentText = "";
+        if (targetType === "text") {
+            contentText = document.getElementById("content").value.trim();
+        } else if (targetType === "image") {
+            contentText = "[Image Post attached]";
+        } else if (targetType === "video") {
+            contentText = "[Video: " + document.getElementById("video-url").value.trim() + "]";
+        } else if (targetType === "link") {
+            contentText = "[Link: " + document.getElementById("link-url").value.trim() + "]";
+        }
+        
+        const newPost = {
+            community: document.getElementById("community").value,
+            title: title.value.trim(),
+            content: contentText,
+            timestamp: new Date().toISOString()
+        };
+        
+        posts.unshift(newPost);
+        localStorage.setItem('naqash_posts', JSON.stringify(posts));
+
         showToast("Posting...");
         setTimeout(() => window.location.href = "homepage.html", 1000);
       }
@@ -304,4 +327,52 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Dynamic Homepage Posts
+  const isHomepage = window.location.pathname.endsWith("homepage.html") || window.location.pathname.endsWith("/") || window.location.pathname === "";
+  if (isHomepage) {
+    const feed = document.querySelector("main.feed");
+    if (feed) {
+      const posts = JSON.parse(localStorage.getItem('naqash_posts') || '[]');
+      
+      posts.slice().reverse().forEach(post => {
+        const article = document.createElement("article");
+        article.className = "card post-card";
+        
+        const mainContent = document.createElement("div");
+        mainContent.className = "post-main-content";
+        
+        const header = document.createElement("div");
+        header.className = "post-header";
+        header.textContent = `${post.community} • Just now`;
+        
+        const titleLink = document.createElement("a");
+        titleLink.href = "post.html";
+        titleLink.className = "post-title";
+        titleLink.textContent = post.title;
+        
+        const body = document.createElement("p");
+        body.className = "post-body";
+        body.textContent = post.content;
+        
+        mainContent.appendChild(header);
+        mainContent.appendChild(titleLink);
+        mainContent.appendChild(body);
+        
+        const voteSection = document.createElement("div");
+        voteSection.className = "vote-section";
+        
+        const footerMeta = document.createElement("span");
+        footerMeta.className = "footer-meta";
+        footerMeta.innerHTML = `<img src="images/comment.png" alt="Comments" class="comment-icon" /> 0 Comments`;
+        
+        voteSection.appendChild(footerMeta);
+        
+        article.appendChild(mainContent);
+        article.appendChild(voteSection);
+        
+        feed.insertBefore(article, feed.firstChild);
+      });
+    }
+  }
 });
