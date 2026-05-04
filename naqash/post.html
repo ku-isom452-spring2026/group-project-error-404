@@ -77,13 +77,16 @@
 
         <section class="card comment-box">
           <h3>Add a comment</h3>
-          <textarea
-            class="comment-input"
-            placeholder="Write your comment..."
-          ></textarea>
-          <div class="comment-actions">
-            <button class="btn btn-primary" type="button">Submit</button>
-          </div>
+          <form id="comment-form">
+            <textarea
+              id="comment-input"
+              class="comment-input form-input"
+              placeholder="Write your comment..."
+            ></textarea>
+            <div class="comment-actions">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
         </section>
 
         <section class="card comments-section">

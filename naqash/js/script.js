@@ -208,4 +208,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Comment Form Validation
+  const commentForm = document.getElementById("comment-form");
+  if (commentForm) {
+    commentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const commentInput = document.getElementById("comment-input");
+      clearError(commentInput);
+      if (commentInput.value.trim() === "") {
+        showError(commentInput, "Comment cannot be empty.");
+      } else {
+        alert("Comment posted successfully!");
+        commentInput.value = "";
+      }
+    });
+  }
+
+  // Search Form Validation
+  const searchForms = document.querySelectorAll(".search-form");
+  searchForms.forEach(form => {
+    form.addEventListener("submit", (e) => {
+      const searchInput = form.querySelector(".search-bar");
+      if (searchInput) {
+        clearError(searchInput);
+        if (searchInput.value.trim() === "") {
+          e.preventDefault();
+          showError(searchInput, "Please enter a search term.");
+        }
+      }
+    });
+  });
 });
