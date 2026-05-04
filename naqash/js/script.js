@@ -246,7 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
         showError(commentInput, "Comment cannot be empty.");
       } else {
         const commentsList = document.getElementById("comments-list");
+        const commentText = commentInput.value.trim();
+
         if (commentsList) {
+          const comments = JSON.parse(localStorage.getItem('naqash_comments') || '[]');
+          comments.unshift(commentText);
+          localStorage.setItem('naqash_comments', JSON.stringify(comments));
+
           const newComment = document.createElement("div");
           newComment.className = "comment";
           
@@ -254,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
           strong.textContent = "u/CurrentUser:";
           
           const p = document.createElement("p");
-          p.textContent = commentInput.value.trim();
+          p.textContent = commentText;
           
           newComment.appendChild(strong);
           newComment.appendChild(p);
@@ -372,6 +378,31 @@ document.addEventListener("DOMContentLoaded", () => {
         article.appendChild(voteSection);
         
         feed.insertBefore(article, feed.firstChild);
+      });
+    }
+  }
+
+  // Dynamic Post Comments
+  const isPostPage = window.location.pathname.endsWith("post.html");
+  if (isPostPage) {
+    const commentsList = document.getElementById("comments-list");
+    if (commentsList) {
+      const comments = JSON.parse(localStorage.getItem('naqash_comments') || '[]');
+      
+      comments.slice().reverse().forEach(commentText => {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+        
+        const strong = document.createElement("strong");
+        strong.textContent = "u/CurrentUser:";
+        
+        const p = document.createElement("p");
+        p.textContent = commentText;
+        
+        newComment.appendChild(strong);
+        newComment.appendChild(p);
+        
+        commentsList.insertBefore(newComment, commentsList.firstChild);
       });
     }
   }
