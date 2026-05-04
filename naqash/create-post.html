@@ -72,19 +72,36 @@
               value=""
             />
 
-            <div class="post-tabs">
-              <button type="button" class="tab-btn">Text</button>
-              <button type="button" class="tab-btn">Image</button>
-              <button type="button" class="tab-btn">Video</button>
-              <button type="button" class="tab-btn">Link</button>
+            <div class="post-tabs" id="create-post-tabs">
+              <button type="button" class="tab-btn is-active" data-target="text">Text</button>
+              <button type="button" class="tab-btn" data-target="image">Image</button>
+              <button type="button" class="tab-btn" data-target="video">Video</button>
+              <button type="button" class="tab-btn" data-target="link">Link</button>
             </div>
 
-            <label for="content">Content:</label>
-            <textarea
-              id="content"
-              class="form-input"
-              placeholder="Write your post..."
-            ></textarea>
+            <div id="input-section-text" class="post-input-section">
+              <label for="content">Content:</label>
+              <textarea
+                id="content"
+                class="form-input"
+                placeholder="Write your post..."
+              ></textarea>
+            </div>
+
+            <div id="input-section-image" class="post-input-section" style="display: none;">
+              <label for="image-upload">Upload Image:</label>
+              <input type="file" id="image-upload" class="form-input" accept="image/*" />
+            </div>
+
+            <div id="input-section-video" class="post-input-section" style="display: none;">
+              <label for="video-url">Video URL:</label>
+              <input type="url" id="video-url" class="form-input" placeholder="Enter YouTube or Vimeo URL" />
+            </div>
+
+            <div id="input-section-link" class="post-input-section" style="display: none;">
+              <label for="link-url">Link URL:</label>
+              <input type="url" id="link-url" class="form-input" placeholder="Enter link URL" />
+            </div>
 
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Post</button>
