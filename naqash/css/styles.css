@@ -1294,9 +1294,6 @@ details p {
 /* Fix create post layout */
 .page-layout .feed {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
 }
 
 .create-post-box {
