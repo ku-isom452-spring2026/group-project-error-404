@@ -174,6 +174,13 @@ aside:last-of-type {
   flex-direction: column;
   margin-bottom: 15px;
   min-height: 160px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  border-color: #898989;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .feed {
@@ -196,6 +203,10 @@ aside:last-of-type {
   font-weight: 600;
   text-decoration: none;
   color: var(--text-main);
+}
+
+.post-title:hover {
+  text-decoration: underline;
 }
 
 .vote-section {

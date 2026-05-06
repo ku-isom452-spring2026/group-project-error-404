@@ -402,7 +402,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const voteSection = document.createElement("div");
         voteSection.className = "vote-section";
         
-        const footerMeta = document.createElement("span");
+        const footerMeta = document.createElement("a");
+        footerMeta.href = "post.html";
+        footerMeta.style.textDecoration = "none";
         footerMeta.className = "footer-meta";
         footerMeta.innerHTML = `<img src="images/comment.png" alt="Comments" class="comment-icon" /> 0 Comments`;
         
